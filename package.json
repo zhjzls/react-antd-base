@@ -20,7 +20,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "eslint src/**/*.js"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": ["node_modules/.bin/eslint --fix", "git add"]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,12 +41,9 @@
     ]
   },
   "devDependencies": {
-    "husky": "^4.2.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
-    }
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.6"
   }
 }

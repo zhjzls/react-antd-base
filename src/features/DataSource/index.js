@@ -1,7 +1,10 @@
 import React from 'react';
 import { Card, Table} from 'antd'
-// import AdvancedSearchForm from './SearchBar'
 
+
+// import AdvancedSearchForm from './SearchBar'
+console.log('datasource/index.js');
+function test(test){return test}
 const columns = [
     {
         title: 'Name',

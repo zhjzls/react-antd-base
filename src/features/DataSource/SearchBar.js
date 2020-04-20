@@ -6,6 +6,9 @@ class AdvancedSearchForm extends React.Component {
   };
 
   // To generate mock Form.Item
+
+
+  
   getFields() {
     const count = this.state.expand ? 10 : 6;
     const { getFieldDecorator } = this.props.form;
