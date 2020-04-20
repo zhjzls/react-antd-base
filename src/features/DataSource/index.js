@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Table} from 'antd'
-import AdvancedSearchForm from './SearchBar'
+// import AdvancedSearchForm from './SearchBar'
 
 const columns = [
     {
@@ -43,7 +43,7 @@ export default function DataSource() {
     return (
         <div>
             <Card>
-                <AdvancedSearchForm />
+                {/* <AdvancedSearchForm /> */}
             </Card>
 
             <Card style={{ marginTop: "20px" }}>

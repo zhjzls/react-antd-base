@@ -1,5 +1,5 @@
-import { Form, Row, Col, Input, Button, Icon } from 'antd';
-
+import React from 'react';
+import { Form, Row, Col, Input, Button } from 'antd';
 class AdvancedSearchForm extends React.Component {
   state = {
     expand: false,
@@ -58,7 +58,7 @@ class AdvancedSearchForm extends React.Component {
               Clear
             </Button>
             <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-              Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
+              Collapse {this.state.expand ? 'up' : 'down'}
             </a>
           </Col>
         </Row>
@@ -67,5 +67,5 @@ class AdvancedSearchForm extends React.Component {
   }
 }
 
-const WrappedAdvancedSearchForm = Form.create({ name: 'advanced_search' })(AdvancedSearchForm)
-export default WrappedAdvancedSearchForm
+// const WrappedAdvancedSearchForm = Form.create({ name: 'advanced_search' })(AdvancedSearchForm)
+export default AdvancedSearchForm
