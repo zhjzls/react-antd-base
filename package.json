@@ -22,6 +22,12 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "echo $HUSKY_GIT_PARAMS"
+    }
+  },
   "lint-staged": {
     "src/**/*.js": ["node_modules/.bin/eslint --fix", "git add"]
   },
