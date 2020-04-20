@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import 'antd/dist/antd.css'
-import App from './Index/App';
-import * as serviceWorker from './serviceWorker';
+import App from './Index/App'
+import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
-      <App />, document.getElementById('root')
+      <App />,   
+   document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
