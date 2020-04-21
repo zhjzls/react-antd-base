@@ -24,12 +24,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "npm run precommit",
       "commit-msg": "echo $HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
-    "src/**/*.js": ["node_modules/.bin/eslint --fix", "git add"]
+    "src/**/*.js": "eslint"
   },
   "eslintConfig": {
     "extends": "react-app"

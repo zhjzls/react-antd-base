@@ -4,7 +4,7 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
   UserOutlined,
-  VideoCameraOutlined,
+  // VideoCameraOutlined,
   TeamOutlined
 } from '@ant-design/icons';
 import {
@@ -18,9 +18,9 @@ import './App.css'
 import routeConfig from '../route/index'
 
 const { Header, Sider, Content } = Layout;
-function getDataType(params) {
-  return Object.prototype.toString.call(params).slice(1, -7).toLowerCase()
-}
+// function getDataType(params) {
+//   return Object.prototype.toString.call(params).slice(1, -7).toLowerCase()
+// }
 function getLinks(routeConfig) {
   return routeConfig.map(item => {
     if (item.children) {
@@ -51,18 +51,18 @@ function flatten(array) {
   return array.reduce((init, cur)=> init.concat(Array.isArray(cur.children)? flatten(cur.children): cur), [])
 }
 // 拍扁路由数组方案2
-function getRoutes(routeConfig) {
-  // const spreadArray = flatten(routeConfig)
-  let spreadRoutes = []
-  routeConfig.forEach(route=>{
-    if(route.children){
-      spreadRoutes = spreadRoutes.concat(getRoutes(route.children))
-    }else{
-      spreadRoutes.push(route)
-    }
-  })
-  return spreadRoutes
-}
+// function getRoutes(routeConfig) {
+//   // const spreadArray = flatten(routeConfig)
+//   let spreadRoutes = []
+//   routeConfig.forEach(route=>{
+//     if(route.children){
+//       spreadRoutes = spreadRoutes.concat(getRoutes(route.children))
+//     }else{
+//       spreadRoutes.push(route)
+//     }
+//   })
+//   return spreadRoutes
+// }
 
 function App() {
   const [collapsed, toggleCollapsed] = useState(false)
